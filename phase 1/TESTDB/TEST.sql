@@ -3,7 +3,7 @@ USE OlympicsDB;
 ALTER TABLE Athlete DROP CONSTRAINT CHK_Athlete_Weight;
 
 -- 2. Add the constraint back
-ALTER TABLE Athlete ADD CONSTRAINT CHK_Athlete_Weight CHECK (weight > 0);
+ALTER TABLE Athlete ADD CONSTRAINT CHK_Athlete_Weight CHECK ([weight] > 0);
 
 -- 3. Add a new column with a constraint to an existing table
 ALTER TABLE Country ADD code CHAR(3) NULL CONSTRAINT UQ_Country_Code UNIQUE;
